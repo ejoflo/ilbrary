@@ -10,7 +10,10 @@ body {
 }
 
 h1 {
+    text-align: center;
     color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #libraryContainer {
@@ -21,16 +24,37 @@ h1 {
 }
 
 #bookInput {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
     display: none;
     color: white;
     background-color: gray;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #newBook { /* new button */
     color: black;
+    margin-bottom: 10px;
 }
 
-#bookTable {   /* book table */
+input {
+    text-align: left;
+}
+
+input + p {
+    text-align: left;
+    padding-top: 10px;
+}
+
+#submit {
+    margin-top: 10px;
+}
+/*
+#bookTable {
     display: grid;
     width: 400px;
     height: 100px;
@@ -38,12 +62,14 @@ h1 {
     grid-template: repeat(4, 1fr) / 100px 1fr;
     border: 1px solid black;
     background-color: yellow;
-}
+} 
+*/
 
 div [class*= 'bookIndex'] {
     color: rgb(0, 255, 170);
     width: 300px;
-    height: 125px;
+    height: auto;
+    padding-bottom: 25px;
 }
 
 /* .titleLabel {
