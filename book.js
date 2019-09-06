@@ -1,7 +1,5 @@
 const library = document.querySelector('#libraryContainer');
 const bookInput = document.querySelector('#bookInput');
-const submitButton = document.querySelector('#submit');
-
 let myLibrary = [];
 
 // Book.prototype.info = function() {   // info
@@ -118,9 +116,7 @@ function createListeners() {
         
         bookNum = bookNum.slice(10, bookNum.length);
 
-        button.addEventListener('click', (e) => {
-            console.log(document.getElementById(button.id).previousElementSibling);
-            
+        button.addEventListener('click', (e) => {            
             if (document.getElementById(button.id).previousElementSibling.innerHTML === 'Read? Yes') {
                 document.getElementById(button.id).previousElementSibling.innerHTML = 'Read? No';
                 myLibrary[bookNum]['read'] = 'No';
@@ -138,16 +134,25 @@ function createListeners() {
     });
 }
 
-let bookOne = new Book ('Random Book', 'Randall Randy', 120, 'Yes');
-let bookTwo = new Book ('Whatever Dis Crap Called', 'Wanda Whatever', 200, 'No');
-let bookThree = new Book('Stupid Boi', 'Moby Dick', 1000, 'Yes');
+function initSubmit() {
+    const submitButton = document.querySelector('#submit');
 
-submitButton.addEventListener('click', (e) => {
-    newBook();
-});
+    submitButton.addEventListener('click', (e) => {
+        newBook();
+    });
+}
 
-addBookToLibrary(bookOne);
-addBookToLibrary(bookTwo);
-addBookToLibrary(bookThree);
-render(myLibrary);
+function createDefaultBooks() {
+    let bookOne = new Book ('Randumb Book', 'Randall Randy', 120, 'Yes');
+    let bookTwo = new Book ('Whatever You Wanna Call It', 'Wanda Whatever', 200, 'No');
+    let bookThree = new Book('Big Boi Club', 'Moby Dick', 313, 'Yes');
+
+    addBookToLibrary(bookOne);
+    addBookToLibrary(bookTwo);
+    addBookToLibrary(bookThree);
+    render(myLibrary);
+}
+
+createDefaultBooks();
 createListeners();
+initSubmit();
