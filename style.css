@@ -41,29 +41,40 @@ h1 {
     margin-bottom: 10px;
 }
 
-input {
-    text-align: left;
-}
-
 input + p {
     text-align: left;
     padding-top: 10px;
 }
 
+.inputBox {
+    font-size: 14pt;
+    text-align: left;
+    padding-right: 10px;
+    border-radius: 5px;
+    /* height: 10px; */
+    outline: none;
+}
+
 #submit {
     margin-top: 10px;
 }
-/*
-#bookTable {
-    display: grid;
-    width: 400px;
-    height: 100px;
-    grid-row: 2 / 3;
-    grid-template: repeat(4, 1fr) / 100px 1fr;
-    border: 1px solid black;
+
+button {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    width: 120px;
+    height: 25px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
     background-color: yellow;
-} 
-*/
+}
 
 div [class*= 'bookIndex'] {
     color: rgb(0, 255, 170);
@@ -71,49 +82,3 @@ div [class*= 'bookIndex'] {
     height: auto;
     padding-bottom: 25px;
 }
-
-/* .titleLabel {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    background-color: blue;
-}
-
-.titleText {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    background-color: pink;
-}
-
-.authorLabel {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    background-color: purple;
-}
-
-.authorText {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-    background-color: green;
-}
-
-.pagesLabel {
-    grid-row: 3 / 4;
-    background-color: rgb(0, 255, 157);
-}
-
-.pagesText {
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-    background-color: rgb(0, 195, 255);
-}
-
-.readLabel {
-    grid-row: 4 / 5;
-    background-color: cyan;
-}
-
-.readText {
-    grid-row: 4 / 5;
-    grid-column: 2 / 3;
-    background-color: rgb(225, 0, 255);
-} */

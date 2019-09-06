@@ -6,19 +6,18 @@
     <script type="text/javascript" src="book.js" defer></script>
 </head>
 <body>
-    <h1>My Library App</h1>
+    <h1>My Dumb Library App</h1>
     <center><button id='newBook'>Add a Book</button></center>
     <div id='bookInput'>
         <form id="bookForm">
             <p>Title</p>
-            <input type="text" name="titleInput" size="50" value="Enter title here">
+            <input type="text" class='inputBox' name="titleInput" size="40">
             <p>Author</p>
-            <input type="text" name="authorInput" size="35">
+            <input type="text" class='inputBox' name="authorInput" size="35">
             <p>Pages</p>
-            <input type="text" name="pagesInput" size="5">
+            <input type="text" class='inputBox' name="pagesInput" size="5">
             <p>Read?</p>
-            <input type="radio" name="readYesInput" value="yes">Yes
-            <!-- <input type="radio" name="readNoInput" value="no">No -->
+            <input type="checkbox" name="readYesInput"><span> Yes</span><br>
         </form>
         <button id="submit">Submit</button>
     </div>
